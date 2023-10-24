@@ -6,6 +6,7 @@ import compression from 'compression'
 import cors from 'cors'
 import 'dotenv/config'
 import mongoose from 'mongoose'
+import router from './router'
 
 const app = express()
 
@@ -34,3 +35,7 @@ mongoose.connect(process.env.MONGO_URL)
 mongoose.connection.on('error', (error: Error) => {
   console.log(error)
 })
+
+
+
+app.use('/', router())
