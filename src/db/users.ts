@@ -36,7 +36,7 @@ export const getUsers = () =>
 
 
 export const getUserByEmail = (email: string) => UserModel.findOne({ email })
-export const getUserBySessionToke = (sessionToken: string) => UserModel.findOne({
+export const getUserBySessionToken = (sessionToken: string) => UserModel.findOne({
   'authentication.sessionToken': sessionToken
 })
 
