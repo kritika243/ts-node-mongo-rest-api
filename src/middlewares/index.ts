@@ -1,4 +1,4 @@
-import { getUserBySessionToken } from 'db/users'
+import { getUserBySessionToken } from '../db/users'
 import express from 'express'
 import { merge } from 'lodash'
 
